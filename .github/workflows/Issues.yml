@@ -4,5 +4,5 @@ jobs:
   Output-Infos:
     runs-on: ubuntu-latest
     steps:
-      name: Event Details
-      run: echo "${{ toJSON(github.events) }}"
+      - name: Event Details
+        run: echo "${{ toJSON(github.events) }}"
