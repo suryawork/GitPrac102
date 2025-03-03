@@ -1,4 +1,4 @@
-name: Workflows
+name: Workflows-new
 on:
   pull_request:   #First Trigger
     types:             #Activity Type
