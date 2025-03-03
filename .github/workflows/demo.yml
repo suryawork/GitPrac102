@@ -1,8 +1,9 @@
 name: Workflows
 on:
-  push:
-    branches:
-      - main
+  pull_request:   #First Trigger
+    types:             #Activity Type
+      - opened
+  workflow_dispatch:
 jobs:
   test:
     runs-on: ubuntu-latest
