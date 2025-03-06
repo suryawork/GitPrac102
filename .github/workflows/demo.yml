@@ -1,9 +1,17 @@
-name: Workflows
+name: Activity Workflows
 on:
   pull_request:   #First Trigger
     types:             #Activity Type
       - opened
+    branches:
+      - main
+      - 'dev-*'
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'dev-*' #which covers all branches start with dev
+  
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -26,3 +34,5 @@ jobs:
         run: npm run build
       - name: Deploying 
         run: echo "Deploying.."
+
+  
