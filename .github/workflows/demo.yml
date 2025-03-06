@@ -1,4 +1,4 @@
-name: Activity Workflows
+name: Activity Workflow
 on:
   pull_request:   #First Trigger
     types:             #Activity Type
@@ -7,10 +7,10 @@ on:
       - main
       - 'dev-*'
   workflow_dispatch:
-  # push:
-  #   branches:
-  #     - main
-  #     - 'dev-*' #which covers all branches start with dev
+  push:
+    branches:
+      - main
+      # - 'dev-*' #which covers all branches start with dev
   
 jobs:
   test:
